@@ -1,0 +1,121 @@
+:root {
+    --primary: #ff7f15;
+    --light: #F6F7F8;
+    --dark: #1A2A36;
+}
+
+.fw-medium {
+    font-weight: 500;
+}
+
+.fw-bold {
+    font-weight: 700;
+}
+
+.fw-black {
+    font-weight: 900;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+.service-item {
+    box-shadow: 0 0 45px rgba(178, 38, 38, 0.08);
+}
+
+.service-icon {
+    position: relative;
+    margin: -50px 0 25px 0;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    background: #FFFFFF;
+    border-radius: 100px;
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+    transition: .5s;
+}
+
+.service-item:hover .service-icon {
+    color: #FFFFFF;
+    background: var(--primary);
+}
+
+.container-xxl {
+    z-index: 1;
+}
+  .button {
+    position: relative;
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    color: #fff;
+    border-radius: 20px/50px;
+    text-decoration: none;
+    cursor: pointer;
+    background:#ff7f15;
+    transition: all 0.3s ease-out;
+  }
+  .button:hover {
+    background:rgb(255, 255, 255);
+    color:  #ff7f15;
+  }
+  .overlay {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    transition: opacity .4s;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  .popup {
+    margin: 6rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 5px;
+    width: 45%;
+    position: relative;
+    transition: all 0.4s ease-in-out;
+  }
+  .popup .cross {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease;
+    color: #333;
+  }
+  .popup .cross:hover {
+    color: #ff7f15;;
+  }
+
+.Titre {
+    display: flex;
+    padding: 125px;
+    background-image: url('../Images/mairie.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.Titre h1 {
+    background-color: #f1f1f1;
+    padding: 30px 60px;
+    border: 1px solid black;
+}

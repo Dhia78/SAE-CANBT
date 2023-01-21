@@ -1,0 +1,139 @@
+*{box-sizing:border-box}
+
+img {
+max-width: 100%;
+}
+
+/*pour le saut de page, on cree une class que l'on met en display:none*/
+.target {
+display: none
+}
+
+
+/* englobe le slider */
+
+.cadre_diapo {
+max-width: 50%;
+margin: 2rem auto;
+overflow: hidden;
+}
+
+.interieur_diapo {
+display: flex;
+width: 400%;
+transition: transform .6s ease-in-out;
+}
+
+.TitreArt {
+position: relative;
+}
+
+.TitreArt span {
+position: absolute;
+left: 0;
+top: 5%;
+font-size: 75%;
+text-align: center;
+display: flex;
+padding: .5rem;
+justify-content: center;
+color: white;
+background: hsla(0,0%,0%,.35);
+margin: 0;
+}
+	
+	
+#Img1:target ~ .cadre_diapo .interieur_diapo {
+transform:translatex(0);
+}
+
+#Img2:target ~ .cadre_diapo .interieur_diapo {
+transform:translatex(-25%)
+}
+
+#Img3:target ~ .cadre_diapo .interieur_diapo {
+transform:translatex(-50%);
+}
+
+#Img4:target ~ .cadre_diapo .interieur_diapo {
+transform:translatex(-75%);
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/*navigation avec images miniatures*/
+.navigation_diapo {
+display: flex; /*permet d'aligner les photos les unes à la suite des autres, on peut aussi utiliser le positionnement absolu*/
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+
+.navigation_diapo li {
+    padding: .25rem;
+}
+
+.navigation_diapo img {
+border: 3px solid white;
+box-shadow:0 0 5px hsla(0,0%,0%,.4);
+}
+
+@media (min-width:31.25rem) {
+	.TitreArt span{
+		font-size: initial;
+	}
+}
+
+.actu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+#VoirPlus {
+    margin-bottom: 40px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    padding: 5px 10px;
+    background-color: #071f32;
+    color: #ff7f15;
+
+}
+
+#VoirPlus:hover {
+    animation: colorfade 0.3s;
+    background-color: #FFF;
+}
+
+@keyframes colorfade{
+    from {
+        background-color:#071f32;
+    }
+    to {
+        background-color: #FFF; 
+    }
+}
+
+.Titre {
+    display: flex;
+    padding: 125px;
+    background-image: url('../Images/Actu.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.Titre h1 {
+    background-color: #f1f1f1;
+    padding: 30px 60px;
+    border: 1px solid black;
+}
